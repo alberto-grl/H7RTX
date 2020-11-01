@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name flash)(type Legacy)(uri ${KIPRJMOD}/flash.lib)(options "")(descr ""))
+  (lib (name h750vbt6)(type Legacy)(uri C:/Users/alberto/Schemi/H7RTX/h750vbt6.lib)(options "")(descr ""))
+)

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -706,19 +706,6 @@ Connection ~ 1150 7100
 Wire Wire Line
 	1150 6900 1150 7100
 $Comp
-L h750vbt6:STM32H750VBT6 U2
-U 1 1 5BC84846
-P 5450 3200
-F 0 "U2" H 6600 150 50  0000 C CNN
-F 1 "STM32H750VBT6" H 6650 300 50  0000 C CNN
-F 2 "Package_QFP:LQFP-100_14x14mm_P0.5mm" H 5450 3200 50  0001 C CNN
-F 3 "DOCUMENTATION" H 5450 3200 50  0001 C CNN
-F 4 "STM32H750VBT6" H 0   0   50  0001 C CNN "PartNumber"
-F 5 "ST Microelectronics" H 0   0   50  0001 C CNN "Manufacturer"
-	1    5450 3200
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0101
 U 1 1 5BC8FC2B
 P 5700 6650
@@ -740,15 +727,11 @@ Wire Wire Line
 Wire Wire Line
 	5850 1000 7000 1000
 Wire Wire Line
-	5750 850  5750 1200
+	5750 850  5750 1050
 Wire Wire Line
 	5750 850  7150 850 
 Wire Wire Line
-	4300 2500 2900 2500
-Wire Wire Line
-	2900 1350 2900 2500
-Wire Wire Line
-	4300 2600 2600 2600
+	2900 1350 2900 1600
 Wire Wire Line
 	2600 1350 2600 2600
 Text Label 4300 2800 2    50   ~ 0
@@ -1245,8 +1228,6 @@ F 5 "Wurth Electronics Inc" H 0   0   50  0001 C CNN "Manufacturer"
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	3950 2700 4300 2700
-Wire Wire Line
 	3950 2900 3650 2900
 $Comp
 L power:GND #PWR02
@@ -1368,6 +1349,161 @@ Wire Wire Line
 Connection ~ 3950 2700
 Wire Wire Line
 	5200 6600 5700 6600
+Text GLabel 4100 4300 0    50   Input ~ 0
+RF_ADC_IN
 Wire Wire Line
-	5050 1200 5750 1200
+	4100 4300 4300 4300
+Wire Wire Line
+	3950 2700 4300 2700
+Wire Wire Line
+	4300 2600 2600 2600
+Wire Wire Line
+	4300 2500 2900 2500
+$Comp
+L proto-h750-rescue:STM32H750VBT6-h750vbt6 U2
+U 1 1 5BC84846
+P 5450 3200
+F 0 "U2" H 6600 150 50  0000 C CNN
+F 1 "STM32H750VBT6" H 6650 300 50  0000 C CNN
+F 2 "Package_QFP:LQFP-100_14x14mm_P0.5mm" H 5450 3200 50  0001 C CNN
+F 3 "DOCUMENTATION" H 5450 3200 50  0001 C CNN
+F 4 "STM32H750VBT6" H 0   0   50  0001 C CNN "PartNumber"
+F 5 "ST Microelectronics" H 0   0   50  0001 C CNN "Manufacturer"
+	1    5450 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 1200 5050 1050
+Wire Wire Line
+	5050 1050 5150 1050
+Connection ~ 5750 1050
+Wire Wire Line
+	5750 1050 5750 1200
+Wire Wire Line
+	5150 1200 5150 1050
+Connection ~ 5150 1050
+Wire Wire Line
+	5150 1050 5250 1050
+Wire Wire Line
+	5250 1200 5250 1050
+Connection ~ 5250 1050
+Wire Wire Line
+	5250 1050 5350 1050
+Wire Wire Line
+	5350 1200 5350 1050
+Connection ~ 5350 1050
+Wire Wire Line
+	5350 1050 5450 1050
+Wire Wire Line
+	5450 1200 5450 1050
+Connection ~ 5450 1050
+Wire Wire Line
+	5450 1050 5650 1050
+Wire Wire Line
+	5650 1200 5650 1050
+Connection ~ 5650 1050
+Wire Wire Line
+	5650 1050 5750 1050
+$Comp
+L Device:C C?
+U 1 1 5FBF8ABB
+P 5200 750
+F 0 "C?" H 5315 796 50  0000 L CNN
+F 1 "100n" H 5315 705 50  0000 L CNN
+F 2 "" H 5238 600 50  0001 C CNN
+F 3 "~" H 5200 750 50  0001 C CNN
+	1    5200 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FBFA87B
+P 4950 750
+F 0 "C?" H 5065 796 50  0000 L CNN
+F 1 "1u" H 5000 650 50  0000 L CNN
+F 2 "" H 4988 600 50  0001 C CNN
+F 3 "~" H 4950 750 50  0001 C CNN
+	1    4950 750 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 600  5200 600 
+Wire Wire Line
+	5200 600  5550 600 
+Wire Wire Line
+	5550 600  5550 1200
+Connection ~ 5200 600 
+Wire Wire Line
+	5200 900  4950 900 
+Wire Wire Line
+	4950 900  4950 950 
+Connection ~ 4950 900 
+$Comp
+L power:GND #PWR?
+U 1 1 5FC14F91
+P 4950 950
+F 0 "#PWR?" H 4950 700 50  0001 C CNN
+F 1 "GND" H 4955 777 50  0000 C CNN
+F 2 "" H 4950 950 50  0001 C CNN
+F 3 "" H 4950 950 50  0001 C CNN
+	1    4950 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Oscillator:ASV-xxxMHz X?
+U 1 1 5FC1672A
+P 3300 1600
+F 0 "X?" H 2956 1646 50  0000 R CNN
+F 1 "ASV-xxxMHz" H 2956 1555 50  0000 R CNN
+F 2 "Oscillator:Oscillator_SMD_Abracon_ASV-4Pin_7.0x5.1mm" H 4000 1250 50  0001 C CNN
+F 3 "http://www.abracon.com/Oscillators/ASV.pdf" H 3200 1600 50  0001 C CNN
+	1    3300 1600
+	-1   0    0    -1  
+$EndComp
+Connection ~ 2900 1600
+Wire Wire Line
+	2900 1600 2900 2500
+$Comp
+L power:GND #PWR?
+U 1 1 5FC34691
+P 3300 1900
+F 0 "#PWR?" H 3300 1650 50  0001 C CNN
+F 1 "GND" H 3305 1727 50  0000 C CNN
+F 2 "" H 3300 1900 50  0001 C CNN
+F 3 "" H 3300 1900 50  0001 C CNN
+	1    3300 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5FC34E2B
+P 3300 1300
+F 0 "#PWR?" H 3300 1150 50  0001 C CNN
+F 1 "VCC" H 3315 1473 50  0000 C CNN
+F 2 "" H 3300 1300 50  0001 C CNN
+F 3 "" H 3300 1300 50  0001 C CNN
+	1    3300 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5FC362D0
+P 3850 4200
+F 0 "TP?" H 3908 4318 50  0000 L CNN
+F 1 "TestPoint" H 3908 4227 50  0000 L CNN
+F 2 "" H 4050 4200 50  0001 C CNN
+F 3 "~" H 4050 4200 50  0001 C CNN
+	1    3850 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 1600 3000 1600
+Wire Wire Line
+	3850 4200 4250 4200
+$Sheet
+S 3300 550  500  200 
+U 5FC4C739
+F0 "RF" 50
+F1 "RF.sch" 50
+$EndSheet
 $EndSCHEMATC

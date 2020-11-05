@@ -301,8 +301,6 @@ Text Label 4300 4500 2    50   ~ 0
 IO0
 Text Label 4300 4400 2    50   ~ 0
 SCLK
-Text Label 6600 4700 0    50   ~ 0
-SD_D0
 Text Label 6600 3500 0    50   ~ 0
 SD_CK
 Text Label 6600 3200 0    50   ~ 0
@@ -381,8 +379,6 @@ Text Label 6600 5900 0    50   ~ 0
 USB0_D-
 Text Label 6600 4100 0    50   ~ 0
 USB1_D+
-Text Label 6600 4200 0    50   ~ 0
-USB1_D-
 $Comp
 L Device:Crystal_GND24 Y1
 U 1 1 5BBF066B
@@ -788,18 +784,6 @@ Text Label 6600 5700 0    50   ~ 0
 PD8
 Text Label 6600 5600 0    50   ~ 0
 PD9
-Text Label 6600 5500 0    50   ~ 0
-PD10
-Text Label 6600 5400 0    50   ~ 0
-PD11
-Text Label 6600 5300 0    50   ~ 0
-PD12
-Text Label 6600 5200 0    50   ~ 0
-PD13
-Text Label 6600 5100 0    50   ~ 0
-PD14
-Text Label 6600 5000 0    50   ~ 0
-PD15
 Text Label 6600 2600 0    50   ~ 0
 PB3
 Text Label 6600 2500 0    50   ~ 0
@@ -828,24 +812,12 @@ Text Label 6600 2800 0    50   ~ 0
 PD6
 Text Label 6600 2700 0    50   ~ 0
 PD7
-Text Label 6600 4900 0    50   ~ 0
-PC6
-Text Label 6600 4800 0    50   ~ 0
-PC7
-Text Label 6600 4600 0    50   ~ 0
-PC9
 Text Label 6600 3700 0    50   ~ 0
 PC10
 Text Label 6600 1800 0    50   ~ 0
 PE0
 Text Label 6600 1700 0    50   ~ 0
 PE1
-Text Label 6600 4500 0    50   ~ 0
-PA8
-Text Label 6600 4400 0    50   ~ 0
-PA9
-Text Label 6600 4300 0    50   ~ 0
-PA10
 Text Label 6600 3800 0    50   ~ 0
 PA15
 Text Label 4300 2200 2    50   ~ 0
@@ -1347,8 +1319,6 @@ Wire Wire Line
 Wire Wire Line
 	3350 2700 3950 2700
 Connection ~ 3950 2700
-Wire Wire Line
-	5200 6600 5700 6600
 Text GLabel 4100 4300 0    50   Input ~ 0
 RF_ADC_IN
 Wire Wire Line
@@ -1359,19 +1329,6 @@ Wire Wire Line
 	4300 2600 2600 2600
 Wire Wire Line
 	4300 2500 2900 2500
-$Comp
-L proto-h750-rescue:STM32H750VBT6-h750vbt6 U2
-U 1 1 5BC84846
-P 5450 3200
-F 0 "U2" H 6600 150 50  0000 C CNN
-F 1 "STM32H750VBT6" H 6650 300 50  0000 C CNN
-F 2 "Package_QFP:LQFP-100_14x14mm_P0.5mm" H 5450 3200 50  0001 C CNN
-F 3 "DOCUMENTATION" H 5450 3200 50  0001 C CNN
-F 4 "STM32H750VBT6" H 0   0   50  0001 C CNN "PartNumber"
-F 5 "ST Microelectronics" H 0   0   50  0001 C CNN "Manufacturer"
-	1    5450 3200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5050 1200 5050 1050
 Wire Wire Line
@@ -1506,4 +1463,46 @@ U 5FC4C739
 F0 "RF" 50
 F1 "RF.sch" 50
 $EndSheet
+Text Label 6600 4300 0    50   ~ 0
+PA10
+Text Label 6600 4400 0    50   ~ 0
+PA9
+Text Label 6600 4500 0    50   ~ 0
+PA8
+Text Label 6600 4600 0    50   ~ 0
+PC9
+Text Label 6600 4800 0    50   ~ 0
+PC7
+Text Label 6600 4900 0    50   ~ 0
+PC6
+Text Label 6600 5000 0    50   ~ 0
+PD15
+Text Label 6600 5100 0    50   ~ 0
+PD14
+Text Label 6600 5200 0    50   ~ 0
+PD13
+Text Label 6600 5300 0    50   ~ 0
+PD12
+Text Label 6600 5400 0    50   ~ 0
+PD11
+Text Label 6600 5500 0    50   ~ 0
+PD10
+Text Label 6600 4200 0    50   ~ 0
+USB1_D-
+Text Label 6600 4700 0    50   ~ 0
+SD_D0
+$Comp
+L h750vbt6a:STM32H750VBT6 U?
+U 1 1 5FA74BCD
+P 5450 3200
+F 0 "U?" H 5450 -289 50  0000 C CNN
+F 1 "STM32H750VBT6" H 6150 -200 50  0000 C CNN
+F 2 "MODULE" H 5450 3200 50  0001 C CNN
+F 3 "DOCUMENTATION" H 5450 3200 50  0001 C CNN
+	1    5450 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 6600 5700 6600
+Connection ~ 5700 6600
 $EndSCHEMATC

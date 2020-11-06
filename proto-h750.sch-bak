@@ -1505,4 +1505,8 @@ $EndComp
 Wire Wire Line
 	5600 6600 5700 6600
 Connection ~ 5700 6600
+Wire Wire Line
+	6600 4600 7250 4600
+Text GLabel 7250 4600 2    50   Input ~ 0
+MCO
 $EndSCHEMATC

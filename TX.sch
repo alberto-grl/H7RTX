@@ -1,0 +1,130 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LM5134:LM5134AMF_NOPB U?
+U 1 1 5FAD6B1D
+P 3900 3750
+F 0 "U?" H 3900 4338 60  0000 C CNN
+F 1 "LM5134AMF_NOPB" H 3900 4232 60  0000 C CNN
+F 2 "DBV0006A_N" H 3900 3690 60  0001 C CNN
+F 3 "" H 3900 3750 60  0000 C CNN
+	1    3900 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:L7812 U?
+U 1 1 5FAD833B
+P 1400 3550
+F 0 "U?" H 1400 3792 50  0000 C CNN
+F 1 "L7812" H 1400 3701 50  0000 C CNN
+F 2 "" H 1425 3400 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 1400 3500 50  0001 C CNN
+	1    1400 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FADAD10
+P 1950 3700
+F 0 "C?" H 2065 3746 50  0000 L CNN
+F 1 "C" H 2065 3655 50  0000 L CNN
+F 2 "" H 1988 3550 50  0001 C CNN
+F 3 "~" H 1950 3700 50  0001 C CNN
+	1    1950 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FADB90F
+P 2400 3700
+F 0 "C?" H 2515 3746 50  0000 L CNN
+F 1 "C" H 2515 3655 50  0000 L CNN
+F 2 "" H 2438 3550 50  0001 C CNN
+F 3 "~" H 2400 3700 50  0001 C CNN
+	1    2400 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 3550 1950 3550
+Wire Wire Line
+	1950 3550 2400 3550
+Connection ~ 1950 3550
+Wire Wire Line
+	2400 3550 3100 3550
+Connection ~ 2400 3550
+$Comp
+L Device:C C?
+U 1 1 5FADDA59
+P 900 3700
+F 0 "C?" H 1015 3746 50  0000 L CNN
+F 1 "C" H 1015 3655 50  0000 L CNN
+F 2 "" H 938 3550 50  0001 C CNN
+F 3 "~" H 900 3700 50  0001 C CNN
+	1    900  3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  3850 1400 3850
+Wire Wire Line
+	1400 3850 1700 3850
+Connection ~ 1400 3850
+Wire Wire Line
+	1950 3850 2400 3850
+Connection ~ 1950 3850
+Wire Wire Line
+	1700 3850 1700 4000
+Connection ~ 1700 3850
+Wire Wire Line
+	1700 3850 1950 3850
+$Comp
+L power:GND #PWR?
+U 1 1 5FADEA9D
+P 1700 4000
+F 0 "#PWR?" H 1700 3750 50  0001 C CNN
+F 1 "GND" H 1705 3827 50  0000 C CNN
+F 2 "" H 1700 4000 50  0001 C CNN
+F 3 "" H 1700 4000 50  0001 C CNN
+	1    1700 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FADF1D7
+P 4700 3950
+F 0 "#PWR?" H 4700 3700 50  0001 C CNN
+F 1 "GND" H 4705 3777 50  0000 C CNN
+F 2 "" H 4700 3950 50  0001 C CNN
+F 3 "" H 4700 3950 50  0001 C CNN
+	1    4700 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 3550 900  3550
+Wire Wire Line
+	900  3550 900  3200
+Connection ~ 900  3550
+$Comp
+L power:+24V #PWR?
+U 1 1 5FAE0A0E
+P 900 3200
+F 0 "#PWR?" H 900 3050 50  0001 C CNN
+F 1 "+24V" H 915 3373 50  0000 C CNN
+F 2 "" H 900 3200 50  0001 C CNN
+F 3 "" H 900 3200 50  0001 C CNN
+	1    900  3200
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

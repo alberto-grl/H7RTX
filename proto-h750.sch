@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 2
+Sheet 1 3
 Title ""
 Date ""
 Rev ""
@@ -1517,4 +1517,10 @@ F 3 "" H 3750 3800 50  0001 C CNN
 	1    3750 3800
 	1    0    0    -1  
 $EndComp
+$Sheet
+S 4050 650  500  200 
+U 5FAD57A1
+F0 "TX" 50
+F1 "TX.sch" 50
+$EndSheet
 $EndSCHEMATC

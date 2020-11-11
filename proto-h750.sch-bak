@@ -596,22 +596,6 @@ F 5 "C&K" H 0   0   50  0001 C CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:USB_B_Micro J8
-U 1 1 5BC747F6
-P 2950 3750
-F 0 "J8" H 2721 3741 50  0000 R CNN
-F 1 "USB_B_Micro" H 2721 3650 50  0000 R CNN
-F 2 "Connector_USB:USB_Micro-B_Molex-105017-0001" H 3100 3700 50  0001 C CNN
-F 3 "~" H 3100 3700 50  0001 C CNN
-F 4 "105017-0001" H 0   0   50  0001 C CNN "PartNumber"
-F 5 "Molex, LLC" H 0   0   50  0001 C CNN "Manufacturer"
-	1    2950 3750
-	-1   0    0    -1  
-$EndComp
-NoConn ~ 2650 3950
-Wire Wire Line
-	2950 4150 2600 4150
-$Comp
 L power:GND #PWR015
 U 1 1 5BC74800
 P 2600 4150
@@ -622,11 +606,6 @@ F 3 "" H 2600 4150 50  0001 C CNN
 	1    2600 4150
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	2950 4150 3050 4150
-Connection ~ 2950 4150
-NoConn ~ 2650 3850
-NoConn ~ 2650 3750
 $Comp
 L Mechanical:MountingHole_Pad H1
 U 1 1 5BC79F0F
@@ -1035,19 +1014,6 @@ F 3 "" H 1050 2450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1150 2450 1050 2450
-$Comp
-L power:+5V #PWR0106
-U 1 1 5BD51870
-P 2550 3550
-F 0 "#PWR0106" H 2550 3400 50  0001 C CNN
-F 1 "+5V" V 2565 3678 50  0000 L CNN
-F 2 "" H 2550 3550 50  0001 C CNN
-F 3 "" H 2550 3550 50  0001 C CNN
-	1    2550 3550
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	2550 3550 2650 3550
 $Comp
 L power:+5V #PWR0107
 U 1 1 5BD5453C
@@ -1509,4 +1475,46 @@ Wire Wire Line
 	6600 4600 7250 4600
 Text GLabel 7250 4600 2    50   Input ~ 0
 MCO
+Wire Wire Line
+	2600 4150 3050 4150
+$Comp
+L Device:C C?
+U 1 1 5FA70E67
+P 3900 3600
+F 0 "C?" V 3648 3600 50  0000 C CNN
+F 1 "10u" V 3739 3600 50  0000 C CNN
+F 2 "" H 3938 3450 50  0001 C CNN
+F 3 "~" H 3900 3600 50  0001 C CNN
+	1    3900 3600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4050 3600 4300 3600
+$Comp
+L Connector:AudioJack3 J?
+U 1 1 5FA76B36
+P 3550 3600
+F 0 "J?" H 3532 3925 50  0000 C CNN
+F 1 "AudioJack3" H 3532 3834 50  0000 C CNN
+F 2 "" H 3550 3600 50  0001 C CNN
+F 3 "~" H 3550 3600 50  0001 C CNN
+	1    3550 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 3500 3750 3600
+Connection ~ 3750 3600
+Wire Wire Line
+	3750 3700 3750 3800
+$Comp
+L power:GND #PWR?
+U 1 1 5FA81806
+P 3750 3800
+F 0 "#PWR?" H 3750 3550 50  0001 C CNN
+F 1 "GND" H 3755 3627 50  0000 C CNN
+F 2 "" H 3750 3800 50  0001 C CNN
+F 3 "" H 3750 3800 50  0001 C CNN
+	1    3750 3800
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

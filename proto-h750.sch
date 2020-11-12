@@ -1523,4 +1523,16 @@ U 5FAD57A1
 F0 "TX" 50
 F1 "TX.sch" 50
 $EndSheet
+Wire Wire Line
+	5200 6600 5300 6600
+Wire Wire Line
+	5300 6600 5400 6600
+Connection ~ 5300 6600
+Wire Wire Line
+	5400 6600 5500 6600
+Connection ~ 5400 6600
+Wire Wire Line
+	5500 6600 5600 6600
+Connection ~ 5500 6600
+Connection ~ 5600 6600
 $EndSCHEMATC

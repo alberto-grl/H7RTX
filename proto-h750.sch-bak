@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -1535,4 +1535,10 @@ Wire Wire Line
 	5500 6600 5600 6600
 Connection ~ 5500 6600
 Connection ~ 5600 6600
+$Sheet
+S 3850 1200 650  150 
+U 5FB134F3
+F0 "Modulator" 50
+F1 "Modulator.sch" 50
+$EndSheet
 $EndSCHEMATC

@@ -1004,7 +1004,7 @@ F 1 "Transformer_1P_1S" H 3250 4990 50  0000 C CNN
 F 2 "Transformer_THT:Transformer_Toroid_Horizontal_D10.5mm_Amidon-T37" H 3250 4700 50  0001 C CNN
 F 3 "~" H 3250 4700 50  0001 C CNN
 	1    3250 4700
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	2150 4500 2550 4500

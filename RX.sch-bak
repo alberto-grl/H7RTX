@@ -996,12 +996,12 @@ Connection ~ 6850 4600
 Wire Wire Line
 	2850 5150 2850 4900
 $Comp
-L Device:Transformer_1P_1S T?
+L Device:Transformer_1P_1S T1
 U 1 1 5FDD5E3D
 P 3250 4700
-F 0 "T?" H 3250 5081 50  0000 C CNN
+F 0 "T1" H 3250 5081 50  0000 C CNN
 F 1 "Transformer_1P_1S" H 3250 4990 50  0000 C CNN
-F 2 "" H 3250 4700 50  0001 C CNN
+F 2 "Transformer_THT:Transformer_Toroid_Horizontal_D10.5mm_Amidon-T37" H 3250 4700 50  0001 C CNN
 F 3 "~" H 3250 4700 50  0001 C CNN
 	1    3250 4700
 	1    0    0    -1  

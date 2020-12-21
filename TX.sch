@@ -308,7 +308,7 @@ U 1 1 5FADB08B
 P 7700 2850
 F 0 "TP2" H 7758 2968 50  0000 L CNN
 F 1 "TestPoint" H 7758 2877 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 7900 2850 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7900 2850 50  0001 C CNN
 F 3 "~" H 7900 2850 50  0001 C CNN
 	1    7700 2850
 	1    0    0    -1  

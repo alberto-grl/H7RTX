@@ -388,7 +388,7 @@ AR Path="/5FC59CF7" Ref="TP?"  Part="1"
 AR Path="/5FC4C739/5FC59CF7" Ref="TP3"  Part="1" 
 F 0 "TP3" H 4258 2668 50  0000 L CNN
 F 1 "TestPoint" H 4300 2600 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 4400 2550 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4400 2550 50  0001 C CNN
 F 3 "~" H 4400 2550 50  0001 C CNN
 	1    4200 2550
 	1    0    0    -1  
@@ -840,7 +840,7 @@ U 1 1 5FA82607
 P 7250 4600
 F 0 "TP4" H 7150 4900 50  0000 L CNN
 F 1 "TestPoint" H 7100 5000 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 7450 4600 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7450 4600 50  0001 C CNN
 F 3 "~" H 7450 4600 50  0001 C CNN
 	1    7250 4600
 	1    0    0    -1  

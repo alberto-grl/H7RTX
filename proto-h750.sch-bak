@@ -224,7 +224,7 @@ SD_CK
 Text Label 6600 3200 0    50   ~ 0
 SD_CMD
 $Comp
-L Connector:USB_B_Micro J3
+L proto-h750-rescue:USB_B_Micro-Connector J3
 U 1 1 5BBEAA02
 P 9850 5800
 F 0 "J3" H 9621 5791 50  0000 R CNN
@@ -236,26 +236,7 @@ F 5 "Molex, LLC" H 6900 350 50  0001 C CNN "Manufacturer"
 	1    9850 5800
 	-1   0    0    -1  
 $EndComp
-$Comp
-L Connector:USB_B_Micro J2
-U 1 1 5BBEAC02
-P 9850 4900
-F 0 "J2" H 9621 4891 50  0000 R CNN
-F 1 "USB_B_Micro" H 9621 4800 50  0000 R CNN
-F 2 "Connector_USB:USB_Micro-B_Molex-105017-0001" H 10000 4850 50  0001 C CNN
-F 3 "~" H 10000 4850 50  0001 C CNN
-F 4 "105017-0001" H 6900 350 50  0001 C CNN "PartNumber"
-F 5 "Molex, LLC" H 6900 350 50  0001 C CNN "Manufacturer"
-	1    9850 4900
-	-1   0    0    -1  
-$EndComp
-NoConn ~ 9550 5100
 NoConn ~ 9550 6000
-Wire Wire Line
-	9950 5300 9850 5300
-Connection ~ 9850 5300
-Wire Wire Line
-	9850 5300 9500 5300
 Wire Wire Line
 	9950 6200 9850 6200
 Connection ~ 9850 6200
@@ -272,25 +253,10 @@ F 3 "" H 9500 6200 50  0001 C CNN
 	1    9500 6200
 	0    1    1    0   
 $EndComp
-$Comp
-L power:GND #PWR010
-U 1 1 5BBEC8F5
-P 9500 5300
-F 0 "#PWR010" H 9500 5050 50  0001 C CNN
-F 1 "GND" V 9505 5172 50  0000 R CNN
-F 2 "" H 9500 5300 50  0001 C CNN
-F 3 "" H 9500 5300 50  0001 C CNN
-	1    9500 5300
-	0    1    1    0   
-$EndComp
 Text Label 9550 5800 2    50   ~ 0
 USB1_D+
 Text Label 9550 5900 2    50   ~ 0
 USB1_D-
-Text Label 9550 4900 2    50   ~ 0
-USB0_D+
-Text Label 9550 5000 2    50   ~ 0
-USB0_D-
 Text Label 6600 5800 0    50   ~ 0
 USB0_D+
 Text Label 6600 5900 0    50   ~ 0
@@ -447,43 +413,6 @@ F 4 "-" H 0   0   50  0001 C CNN "PartNumber"
 F 5 "-" H 0   0   50  0001 C CNN "Manufacturer"
 	1    1350 5150
 	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW1
-U 1 1 5BC74077
-P 1450 6150
-F 0 "SW1" H 1450 6435 50  0000 C CNN
-F 1 "SW_Push" H 1450 6344 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_Tactile_SPST_Angled_PTS645Vx31-2LFS" H 1450 6350 50  0001 C CNN
-F 3 "" H 1450 6350 50  0001 C CNN
-F 4 "PTS645VL31-2 LFS" H 0   0   50  0001 C CNN "PartNumber"
-F 5 "C&K" H 0   0   50  0001 C CNN "Manufacturer"
-	1    1450 6150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW2
-U 1 1 5BC7420B
-P 1450 5750
-F 0 "SW2" H 1450 6035 50  0000 C CNN
-F 1 "SW_Push" H 1450 5944 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_Tactile_SPST_Angled_PTS645Vx31-2LFS" H 1450 5950 50  0001 C CNN
-F 3 "" H 1450 5950 50  0001 C CNN
-F 4 "PTS645VL31-2 LFS" H 0   0   50  0001 C CNN "PartNumber"
-F 5 "C&K" H 0   0   50  0001 C CNN "Manufacturer"
-	1    1450 5750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR015
-U 1 1 5BC74800
-P 9500 4500
-F 0 "#PWR015" H 9500 4250 50  0001 C CNN
-F 1 "GND" V 9505 4372 50  0000 R CNN
-F 2 "" H 9500 4500 50  0001 C CNN
-F 3 "" H 9500 4500 50  0001 C CNN
-	1    9500 4500
-	0    1    1    0   
 $EndComp
 $Comp
 L Mechanical:MountingHole_Pad H1
@@ -686,11 +615,11 @@ Text Label 1150 5250 2    50   ~ 0
 SWCLK
 Text Label 1650 5250 0    50   ~ 0
 SWDIO
-Text Label 1650 5750 0    50   ~ 0
+Text Label 2050 5750 0    50   ~ 0
 nRESET
 Text Label 1650 5150 0    50   ~ 0
 nRESET
-Text Label 1650 6150 0    50   ~ 0
+Text Label 2050 6150 0    50   ~ 0
 PC13
 $Comp
 L power:GND #PWR0102
@@ -1056,8 +985,6 @@ Wire Wire Line
 	6600 4600 7250 4600
 Text GLabel 7250 4600 2    50   Input ~ 0
 MCO
-Wire Wire Line
-	9500 4500 9950 4500
 $Comp
 L Device:C C9
 U 1 1 5FA70E67
@@ -1374,11 +1301,6 @@ Wire Wire Line
 	9450 5600 9450 5450
 Wire Wire Line
 	9450 5450 9000 5450
-Wire Wire Line
-	9000 5450 9000 4700
-Wire Wire Line
-	9000 4700 9550 4700
-Connection ~ 9000 5450
 $Comp
 L Device:C C19
 U 1 1 5FC781AF
@@ -1522,7 +1444,7 @@ F 3 "~" H 6100 850 50  0001 C CNN
 $EndComp
 Connection ~ 6100 850 
 Wire Wire Line
-	6100 850  7150 850 
+	6100 850  6950 850 
 Wire Wire Line
 	3300 1200 3300 1300
 Wire Wire Line
@@ -1831,4 +1753,69 @@ NoConn ~ 4300 2800
 NoConn ~ 4300 2900
 NoConn ~ 4300 3000
 NoConn ~ 4300 3100
+Wire Wire Line
+	6600 5800 7050 5800
+Wire Wire Line
+	6600 5900 7050 5900
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5FE5CDB7
+P 7050 5800
+F 0 "TP1" V 7004 5988 50  0000 L CNN
+F 1 "TestPoint" V 7095 5988 50  0000 L CNN
+F 2 "" H 7250 5800 50  0001 C CNN
+F 3 "~" H 7250 5800 50  0001 C CNN
+	1    7050 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP5
+U 1 1 5FE5DEF5
+P 7050 5900
+F 0 "TP5" H 7108 6018 50  0000 L CNN
+F 1 "TestPoint" H 7108 5927 50  0000 L CNN
+F 2 "" H 7250 5900 50  0001 C CNN
+F 3 "~" H 7250 5900 50  0001 C CNN
+	1    7050 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_DIP_x01 SW2
+U 1 1 5FE72C0D
+P 1550 6150
+F 0 "SW2" H 1550 6417 50  0000 C CNN
+F 1 "SW_DIP_x01" H 1550 6326 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1550 6150 50  0001 C CNN
+F 3 "" H 1550 6150 50  0001 C CNN
+F 4 "-" H 50  -400 50  0001 C CNN "PartNumber"
+F 5 "-" H 50  -400 50  0001 C CNN "Manufacturer"
+	1    1550 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_DIP_x01 SW1
+U 1 1 5FE986B8
+P 1550 5750
+F 0 "SW1" H 1550 6017 50  0000 C CNN
+F 1 "SW_DIP_x01" H 1550 5926 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1550 5750 50  0001 C CNN
+F 3 "" H 1550 5750 50  0001 C CNN
+F 4 "-" H 50  -800 50  0001 C CNN "PartNumber"
+F 5 "-" H 50  -800 50  0001 C CNN "Manufacturer"
+	1    1550 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 5750 2050 5750
+Wire Wire Line
+	1850 6150 2050 6150
+Text GLabel 6850 700  0    50   Input ~ 0
+VCC_CPU
+Wire Wire Line
+	6850 700  6950 700 
+Wire Wire Line
+	6950 700  6950 850 
+Connection ~ 6950 850 
+Wire Wire Line
+	6950 850  7150 850 
 $EndSCHEMATC

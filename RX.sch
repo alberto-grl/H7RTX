@@ -828,10 +828,6 @@ F 3 "~" H 2000 4500 50  0001 C CNN
 	1    2000 4500
 	0    1    1    0   
 $EndComp
-Text GLabel 1850 4500 0    50   Input ~ 0
-RF_IN_1
-Text GLabel 8500 2100 2    50   Input ~ 0
-RF_IN_2
 Wire Wire Line
 	8500 2100 8500 2200
 $Comp
@@ -958,17 +954,6 @@ F 3 "~" H 5150 4000 50  0001 C CNN
 $EndComp
 Connection ~ 5150 4000
 $Comp
-L power:VCC #PWR0103
-U 1 1 5FDEC77F
-P 5100 1500
-F 0 "#PWR0103" H 5100 1350 50  0001 C CNN
-F 1 "VCC" H 5115 1673 50  0000 C CNN
-F 2 "" H 5100 1500 50  0001 C CNN
-F 3 "" H 5100 1500 50  0001 C CNN
-	1    5100 1500
-	1    0    0    -1  
-$EndComp
-$Comp
 L Transistor_BJT:MMBT3904 Q6
 U 1 1 5FD578C5
 P 7950 4600
@@ -1008,4 +993,62 @@ F 3 "~" H 3250 4700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2150 4500 2550 4500
+Wire Wire Line
+	5100 1500 5100 1300
+Wire Wire Line
+	5100 1300 4900 1300
+Text GLabel 4900 1300 0    50   Input ~ 0
+VCC_CPU
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5FE86303
+P 1650 4600
+F 0 "J?" H 1568 4275 50  0000 C CNN
+F 1 "Conn_01x02" H 1568 4366 50  0000 C CNN
+F 2 "" H 1650 4600 50  0001 C CNN
+F 3 "~" H 1650 4600 50  0001 C CNN
+	1    1650 4600
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FE879D5
+P 1850 4650
+F 0 "#PWR?" H 1850 4400 50  0001 C CNN
+F 1 "GND" H 1855 4477 50  0000 C CNN
+F 2 "" H 1850 4650 50  0001 C CNN
+F 3 "" H 1850 4650 50  0001 C CNN
+	1    1850 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 4650 1850 4600
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5FE8C7CF
+P 9350 2100
+F 0 "J?" H 9268 1775 50  0000 C CNN
+F 1 "Conn_01x02" H 9268 1866 50  0000 C CNN
+F 2 "" H 9350 2100 50  0001 C CNN
+F 3 "~" H 9350 2100 50  0001 C CNN
+	1    9350 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 2100 9150 2100
+Wire Wire Line
+	9150 2200 8950 2200
+Wire Wire Line
+	8950 2200 8950 2250
+$Comp
+L power:GND #PWR?
+U 1 1 5FE94330
+P 8950 2250
+F 0 "#PWR?" H 8950 2000 50  0001 C CNN
+F 1 "GND" H 8955 2077 50  0000 C CNN
+F 2 "" H 8950 2250 50  0001 C CNN
+F 3 "" H 8950 2250 50  0001 C CNN
+	1    8950 2250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

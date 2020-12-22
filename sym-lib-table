@@ -1,7 +1,8 @@
 (sym_lib_table
   (lib (name flash)(type Legacy)(uri ${KIPRJMOD}/flash.lib)(options "")(descr ""))
   (lib (name h750vbt6a)(type Legacy)(uri ${KIPRJMOD}/h750vbt6.lib)(options "")(descr ""))
-  (lib (name proto-h750-rescue)(type Legacy)(uri ${KIPRJMOD}/proto-h750-rescue.lib)(options "")(descr "")(disabled))
+  (lib (name proto-h750-rescue)(type Legacy)(uri ${KIPRJMOD}/proto-h750-rescue.lib)(options "")(descr ""))
   (lib (name SA612)(type Legacy)(uri ${KIPRJMOD}/SA612.lib)(options "")(descr ""))
   (lib (name h750vbt6)(type Legacy)(uri /home/martin/Proyectos/kicad/proto-h750/h750vbt6.lib)(options "")(descr ""))
+  (lib (name STA516BETR)(type Legacy)(uri ${KIPRJMOD}/STA516BETR.lib)(options "")(descr ""))
 )

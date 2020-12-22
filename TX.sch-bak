@@ -316,17 +316,6 @@ $EndComp
 Connection ~ 7700 2850
 Wire Wire Line
 	7700 2850 7450 2850
-$Comp
-L power:GND #PWR036
-U 1 1 5FADBE83
-P 9450 2850
-F 0 "#PWR036" H 9450 2600 50  0001 C CNN
-F 1 "GND" H 9455 2677 50  0000 C CNN
-F 2 "" H 9450 2850 50  0001 C CNN
-F 3 "" H 9450 2850 50  0001 C CNN
-	1    9450 2850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8050 2850 8650 2850
 Wire Wire Line
@@ -341,17 +330,17 @@ Wire Wire Line
 Connection ~ 9350 2550
 Wire Wire Line
 	9350 2550 9450 2550
-Text GLabel 9000 2250 0    50   Input ~ 0
+Text GLabel 8050 1900 0    50   Input ~ 0
 MODUL_OUT
 Wire Wire Line
-	9450 2250 9350 2250
+	8500 1900 8400 1900
 Wire Wire Line
-	9450 2350 9350 2350
+	8500 2000 8400 2000
 Wire Wire Line
-	9350 2350 9350 2250
-Connection ~ 9350 2250
+	8400 2000 8400 1900
+Connection ~ 8400 1900
 Wire Wire Line
-	9350 2250 9000 2250
+	8400 1900 8050 1900
 $Comp
 L power:+24V #PWR035
 U 1 1 5FC24D42
@@ -367,37 +356,6 @@ Wire Wire Line
 	9350 1700 9350 1800
 Wire Wire Line
 	9350 2050 9450 2050
-Wire Wire Line
-	9450 2150 9350 2150
-Wire Wire Line
-	9350 2150 9350 2050
-Connection ~ 9350 2050
-Wire Wire Line
-	9450 2750 9450 2800
-$Comp
-L Connector_Generic:Conn_02x08_Odd_Even J8
-U 1 1 5FC54492
-P 9650 2350
-F 0 "J8" H 9700 2867 50  0000 C CNN
-F 1 "Conn_02x08_Odd_Even" H 9700 2776 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 9650 2350 50  0001 C CNN
-F 3 "~" H 9650 2350 50  0001 C CNN
-	1    9650 2350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9450 2800 9400 2800
-Wire Wire Line
-	9400 2800 9400 2650
-Wire Wire Line
-	9400 2650 9450 2650
-Connection ~ 9450 2800
-Wire Wire Line
-	9450 2800 9450 2850
-Text GLabel 9950 2650 2    50   Input ~ 0
-RF_IN_1
-Text GLabel 9950 2750 2    50   Input ~ 0
-RF_IN_2
 $Comp
 L Device:R R9
 U 1 1 5FC804EF
@@ -479,7 +437,7 @@ L Device:D D4
 U 1 1 5FC9C3B8
 P 10750 2400
 F 0 "D4" H 10750 2183 50  0000 C CNN
-F 1 "MMBD914LT3G" H 10750 2274 50  0000 C CNN
+F 1 "MMBD914LT3G" H 10650 2600 50  0000 C CNN
 F 2 "Diode_SMD:D_SOD-123" H 10750 2400 50  0001 C CNN
 F 3 "~" H 10750 2400 50  0001 C CNN
 	1    10750 2400
@@ -592,11 +550,6 @@ Wire Wire Line
 Connection ~ 9400 3300
 Text GLabel 9550 3300 2    50   Input ~ 0
 TXV
-NoConn ~ 9950 2050
-NoConn ~ 9950 2150
-NoConn ~ 9950 2250
-NoConn ~ 9950 2350
-NoConn ~ 9950 2450
 NoConn ~ 4700 3750
 Text GLabel 2900 3000 0    50   Input ~ 0
 MCO
@@ -644,10 +597,7 @@ F 3 "~" H 5150 3550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	10850 2550 10850 3350
-Wire Wire Line
-	9950 2550 10750 2550
-Connection ~ 10750 2550
+	10850 2550 10850 3050
 Wire Wire Line
 	10750 2550 10850 2550
 Wire Wire Line
@@ -673,5 +623,111 @@ Wire Wire Line
 Wire Wire Line
 	5450 2800 5100 2800
 Text Label 5250 2800 0    50   ~ 0
++12V
+$Comp
+L Connector:Screw_Terminal_01x02 J8
+U 1 1 5FE64809
+P 9650 2050
+F 0 "J8" H 9730 2042 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 9730 1951 50  0000 L CNN
+F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal" H 9650 2050 50  0001 C CNN
+F 3 "~" H 9650 2050 50  0001 C CNN
+	1    9650 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5FE732E9
+P 9450 2150
+F 0 "#PWR04" H 9450 1900 50  0001 C CNN
+F 1 "GND" H 9455 1977 50  0000 C CNN
+F 2 "" H 9450 2150 50  0001 C CNN
+F 3 "" H 9450 2150 50  0001 C CNN
+	1    9450 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x02_Odd_Even J3
+U 1 1 5FE75477
+P 8700 1900
+F 0 "J3" H 8750 2117 50  0000 C CNN
+F 1 "Conn_02x02_Odd_Even" H 8400 2050 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 8700 1900 50  0001 C CNN
+F 3 "~" H 8700 1900 50  0001 C CNN
+	1    8700 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5FE75F61
+P 9000 2000
+F 0 "#PWR01" H 9000 1750 50  0001 C CNN
+F 1 "GND" H 9005 1827 50  0000 C CNN
+F 2 "" H 9000 2000 50  0001 C CNN
+F 3 "" H 9000 2000 50  0001 C CNN
+	1    9000 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 1900 9000 2000
+Connection ~ 9000 2000
+$Comp
+L Connector_Generic:Conn_02x02_Odd_Even J10
+U 1 1 5FE7B7BA
+P 9650 2450
+F 0 "J10" H 9700 2667 50  0000 C CNN
+F 1 "Conn_02x02_Odd_Even" H 9050 2500 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 9650 2450 50  0001 C CNN
+F 3 "~" H 9650 2450 50  0001 C CNN
+	1    9650 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5FE7B7C0
+P 9950 2550
+F 0 "#PWR010" H 9950 2300 50  0001 C CNN
+F 1 "GND" H 9955 2377 50  0000 C CNN
+F 2 "" H 9950 2550 50  0001 C CNN
+F 3 "" H 9950 2550 50  0001 C CNN
+	1    9950 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 2450 9950 2550
+Connection ~ 9950 2550
+$Comp
+L Connector_Generic:Conn_02x02_Odd_Even J11
+U 1 1 5FE814C5
+P 10350 2950
+F 0 "J11" H 10400 3167 50  0000 C CNN
+F 1 "Conn_02x02_Odd_Even" H 10650 3100 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 10350 2950 50  0001 C CNN
+F 3 "~" H 10350 2950 50  0001 C CNN
+	1    10350 2950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 5FE814CB
+P 10050 3050
+F 0 "#PWR015" H 10050 2800 50  0001 C CNN
+F 1 "GND" H 10055 2877 50  0000 C CNN
+F 2 "" H 10050 3050 50  0001 C CNN
+F 3 "" H 10050 3050 50  0001 C CNN
+	1    10050 3050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 2950 10050 3050
+Connection ~ 10050 3050
+Wire Wire Line
+	10550 2600 10550 2950
+Wire Wire Line
+	10550 3050 10850 3050
+Connection ~ 10850 3050
+Wire Wire Line
+	10850 3050 10850 3350
+Text Label 10550 2750 0    50   ~ 0
 +12V
 $EndSCHEMATC

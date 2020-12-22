@@ -223,25 +223,7 @@ Text Label 6600 3500 0    50   ~ 0
 SD_CK
 Text Label 6600 3200 0    50   ~ 0
 SD_CMD
-$Comp
-L proto-h750-rescue:USB_B_Micro-Connector J3
-U 1 1 5BBEAA02
-P 9850 5800
-F 0 "J3" H 9621 5791 50  0000 R CNN
-F 1 "USB_B_Micro" H 9621 5700 50  0000 R CNN
-F 2 "Connector_USB:USB_Micro-B_Molex-105017-0001" H 10000 5750 50  0001 C CNN
-F 3 "~" H 10000 5750 50  0001 C CNN
-F 4 "105017-0001" H 6900 350 50  0001 C CNN "PartNumber"
-F 5 "Molex, LLC" H 6900 350 50  0001 C CNN "Manufacturer"
-	1    9850 5800
-	-1   0    0    -1  
-$EndComp
 NoConn ~ 9550 6000
-Wire Wire Line
-	9950 6200 9850 6200
-Connection ~ 9850 6200
-Wire Wire Line
-	9850 6200 9500 6200
 $Comp
 L power:GND #PWR011
 U 1 1 5BBEC86A
@@ -1763,7 +1745,7 @@ U 1 1 5FE5CDB7
 P 7050 5800
 F 0 "TP1" V 7004 5988 50  0000 L CNN
 F 1 "TestPoint" V 7095 5988 50  0000 L CNN
-F 2 "" H 7250 5800 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7250 5800 50  0001 C CNN
 F 3 "~" H 7250 5800 50  0001 C CNN
 	1    7050 5800
 	0    1    1    0   
@@ -1774,7 +1756,7 @@ U 1 1 5FE5DEF5
 P 7050 5900
 F 0 "TP5" H 7108 6018 50  0000 L CNN
 F 1 "TestPoint" H 7108 5927 50  0000 L CNN
-F 2 "" H 7250 5900 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7250 5900 50  0001 C CNN
 F 3 "~" H 7250 5900 50  0001 C CNN
 	1    7050 5900
 	0    1    1    0   
@@ -1818,4 +1800,20 @@ Wire Wire Line
 Connection ~ 6950 850 
 Wire Wire Line
 	6950 850  7150 850 
+Wire Wire Line
+	9500 6200 9850 6200
+$Comp
+L Connector:USB_B_Micro J2
+U 1 1 5FE3386F
+P 9850 5800
+F 0 "J2" H 9620 5789 50  0000 R CNN
+F 1 "USB_B_Micro" H 9620 5698 50  0000 R CNN
+F 2 "Connector_USB:USB_Micro-B_Amphenol_10104110_Horizontal" H 10000 5750 50  0001 C CNN
+F 3 "~" H 10000 5750 50  0001 C CNN
+	1    9850 5800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 6200 9950 6200
+Connection ~ 9850 6200
 $EndSCHEMATC

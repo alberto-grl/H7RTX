@@ -223,25 +223,7 @@ Text Label 6600 3500 0    50   ~ 0
 SD_CK
 Text Label 6600 3200 0    50   ~ 0
 SD_CMD
-$Comp
-L proto-h750-rescue:USB_B_Micro-Connector J3
-U 1 1 5BBEAA02
-P 9850 5800
-F 0 "J3" H 9621 5791 50  0000 R CNN
-F 1 "USB_B_Micro" H 9621 5700 50  0000 R CNN
-F 2 "Connector_USB:USB_Micro-B_Molex-105017-0001" H 10000 5750 50  0001 C CNN
-F 3 "~" H 10000 5750 50  0001 C CNN
-F 4 "105017-0001" H 6900 350 50  0001 C CNN "PartNumber"
-F 5 "Molex, LLC" H 6900 350 50  0001 C CNN "Manufacturer"
-	1    9850 5800
-	-1   0    0    -1  
-$EndComp
 NoConn ~ 9550 6000
-Wire Wire Line
-	9950 6200 9850 6200
-Connection ~ 9850 6200
-Wire Wire Line
-	9850 6200 9500 6200
 $Comp
 L power:GND #PWR011
 U 1 1 5BBEC86A
@@ -1059,10 +1041,6 @@ Text GLabel 7200 4900 2    50   Input ~ 0
 A_PWM
 Wire Wire Line
 	6600 4900 7200 4900
-Text GLabel 3900 4900 0    50   Input ~ 0
-A_PWM
-Wire Wire Line
-	3900 4900 4300 4900
 $Comp
 L Connector_Generic:Conn_02x14_Odd_Even J4
 U 1 1 5FBFF95D
@@ -1387,12 +1365,6 @@ Wire Wire Line
 Text GLabel 4100 4000 0    50   Input ~ 0
 TXV
 Wire Wire Line
-	6600 3200 7250 3200
-Wire Wire Line
-	6600 3500 7250 3500
-NoConn ~ 7250 3200
-NoConn ~ 7250 3500
-Wire Wire Line
 	4300 2300 4050 2300
 Wire Wire Line
 	4300 2400 4050 2400
@@ -1401,7 +1373,6 @@ Wire Wire Line
 NoConn ~ 4050 2300
 NoConn ~ 4050 2350
 NoConn ~ 3600 1600
-NoConn ~ 6600 4700
 Wire Wire Line
 	5750 850  6100 850 
 Text GLabel 3900 5000 0    50   Input ~ 0
@@ -1613,7 +1584,6 @@ NoConn ~ 4300 4500
 NoConn ~ 4300 4600
 NoConn ~ 4300 4700
 NoConn ~ 4300 4800
-NoConn ~ 6600 3600
 Wire Wire Line
 	2800 2700 3000 2700
 Text Label 2800 2700 0    50   ~ 0
@@ -1818,4 +1788,60 @@ Wire Wire Line
 Connection ~ 6950 850 
 Wire Wire Line
 	6950 850  7150 850 
+Wire Wire Line
+	9500 6200 9850 6200
+$Comp
+L Connector:USB_B_Micro J2
+U 1 1 5FE3386F
+P 9850 5800
+F 0 "J2" H 9620 5789 50  0000 R CNN
+F 1 "USB_B_Micro" H 9620 5698 50  0000 R CNN
+F 2 "Connector_USB:USB_Micro-B_Amphenol_10104110_Horizontal" H 10000 5750 50  0001 C CNN
+F 3 "~" H 10000 5750 50  0001 C CNN
+	1    9850 5800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 6200 9950 6200
+Connection ~ 9850 6200
+$Comp
+L Connector:TestPoint_Small TP7
+U 1 1 5FEC2C71
+P 7150 4700
+F 0 "TP7" H 6950 4700 50  0000 L CNN
+F 1 "TestPoint_Small" H 7198 4655 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7350 4700 50  0001 C CNN
+F 3 "~" H 7350 4700 50  0001 C CNN
+	1    7150 4700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6600 4700 7150 4700
+$Comp
+L Connector:TestPoint_Small TP6
+U 1 1 5FED6885
+P 7150 3600
+F 0 "TP6" H 6950 3600 50  0000 L CNN
+F 1 "TestPoint_Small" H 7198 3555 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7350 3600 50  0001 C CNN
+F 3 "~" H 7350 3600 50  0001 C CNN
+	1    7150 3600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6600 3600 7150 3600
+$Comp
+L Connector:TestPoint_Small TP9
+U 1 1 5FEE0A90
+P 7550 3500
+F 0 "TP9" H 7350 3500 50  0000 L CNN
+F 1 "TestPoint_Small" H 7598 3455 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7750 3500 50  0001 C CNN
+F 3 "~" H 7750 3500 50  0001 C CNN
+	1    7550 3500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6600 3500 7550 3500
+NoConn ~ 6600 3200
 $EndSCHEMATC

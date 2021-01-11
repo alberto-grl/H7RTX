@@ -1051,4 +1051,6 @@ F 3 "" H 8950 2250 50  0001 C CNN
 	1    8950 2250
 	1    0    0    -1  
 $EndComp
+Text Notes 4100 4150 0    50   ~ 0
+AN1993.pdf
 $EndSCHEMATC

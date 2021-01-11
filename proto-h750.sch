@@ -162,8 +162,8 @@ $Comp
 L Device:C_Small C15
 U 1 1 5BBE257C
 P 9250 950
-F 0 "C15" H 9342 996 50  0000 L CNN
-F 1 "4.7u" H 9342 905 50  0000 L CNN
+F 0 "C15" H 9200 1150 50  0000 L CNN
+F 1 "4.7u" H 9150 800 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9250 950 50  0001 C CNN
 F 3 "~" H 9250 950 50  0001 C CNN
 F 4 "Wurth Electronics Inc" H 0   0   50  0001 C CNN "Manufacturer"
@@ -784,19 +784,6 @@ F 5 "CRG0805F10K/10" H 0   0   50  0001 C CNN "PartNumber"
 $EndComp
 Wire Wire Line
 	1800 6550 2100 6550
-$Comp
-L power:VCC #PWR017
-U 1 1 5FBF7CC6
-P 2350 6550
-F 0 "#PWR017" H 2350 6400 50  0001 C CNN
-F 1 "VCC" H 2367 6723 50  0000 C CNN
-F 2 "" H 2350 6550 50  0001 C CNN
-F 3 "" H 2350 6550 50  0001 C CNN
-	1    2350 6550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2350 6550 2300 6550
 $Comp
 L power:GND #PWR018
 U 1 1 5FBF7CD3
@@ -1844,4 +1831,25 @@ $EndComp
 Wire Wire Line
 	6600 3500 7550 3500
 NoConn ~ 6600 3200
+$Comp
+L Device:C_Small C1
+U 1 1 5FEB1A80
+P 9450 950
+F 0 "C1" H 9450 1150 50  0000 L CNN
+F 1 "100n" H 9400 800 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9450 950 50  0001 C CNN
+F 3 "~" H 9450 950 50  0001 C CNN
+	1    9450 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 850  9450 850 
+Connection ~ 9250 850 
+Wire Wire Line
+	9250 1050 9450 1050
+Connection ~ 9250 1050
+Wire Wire Line
+	2300 6550 2550 6550
+Text Label 2400 6550 0    50   ~ 0
+VCC_CPU
 $EndSCHEMATC

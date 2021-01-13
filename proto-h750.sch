@@ -1339,16 +1339,6 @@ $EndComp
 Connection ~ 9800 4100
 Wire Wire Line
 	9800 4100 10050 4100
-Text GLabel 4200 1450 0    50   Input ~ 0
-TX_ENA
-Wire Wire Line
-	4200 1450 4300 1450
-Wire Wire Line
-	4300 1450 4300 1700
-Text GLabel 7100 1800 2    50   Input ~ 0
-RXTX
-Wire Wire Line
-	7100 1800 6600 1800
 Text GLabel 4100 4000 0    50   Input ~ 0
 TXV
 Wire Wire Line
@@ -1852,4 +1842,12 @@ Wire Wire Line
 	2300 6550 2550 6550
 Text Label 2400 6550 0    50   ~ 0
 VCC_CPU
+Text GLabel 7200 5400 2    50   Input ~ 0
+TX_ENA
+Wire Wire Line
+	7200 5400 6600 5400
+Text GLabel 7200 5500 2    50   Input ~ 0
+RXTX
+Wire Wire Line
+	6600 5500 7200 5500
 $EndSCHEMATC

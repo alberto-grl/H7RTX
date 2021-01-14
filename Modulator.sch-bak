@@ -622,4 +622,26 @@ F 7 "IPC-7351B" H 4400 2250 50  0001 L BNN "STANDARD"
 	1    4400 2250
 	1    0    0    -1  
 $EndComp
+$Comp
+L Mechanical:MountingHole_Pad H5
+U 1 1 6003E698
+P 4450 3900
+F 0 "H5" H 4550 3949 50  0000 L CNN
+F 1 "MountingHole_Pad" H 4550 3858 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 4450 3900 50  0001 C CNN
+F 3 "~" H 4450 3900 50  0001 C CNN
+	1    4450 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 6003F1E7
+P 4450 4000
+F 0 "#PWR017" H 4450 3750 50  0001 C CNN
+F 1 "GND" H 4455 3827 50  0000 C CNN
+F 2 "" H 4450 4000 50  0001 C CNN
+F 3 "" H 4450 4000 50  0001 C CNN
+	1    4450 4000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
